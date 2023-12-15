@@ -1,12 +1,8 @@
 function checkForSpam(message) {
-    const blacklistedWord1 = "spam";
-    const blacklistedWord2 = "sale";
-    const mes = message.toLowerCase()
-    if (!mes.includes(blacklistedWord1) && !mes.includes(blacklistedWord2))
-        return !true
-    else 
-        return !false
+    const lowercaseMessage = message.toLowerCase()
+    return lowercaseMessage.includes("spam") || lowercaseMessage.includes("sale");
 }
+
 console.log(checkForSpam("Latest technology news"));
 console.log(checkForSpam("JavaScript weekly newsletter"));
 console.log(checkForSpam("Get best sale offers now!"));
